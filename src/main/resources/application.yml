@@ -1,0 +1,35 @@
+spring:
+  profiles:
+    active: local
+  thymeleaf:
+    prefix : classpath:templates/
+    suffix : .html
+    cache : false
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+  devtools:
+    livereload:
+      enabled: true
+  thymeleaf:
+    cache: false
+
+server:
+  title: Video-IMA-Skeleton-local
+  port : 8080
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+  devtools:
+    restart:
+      enabled: true
+
+server:
+  title: Video-IMA-Skeleton-prod
+  port : 8080
+
