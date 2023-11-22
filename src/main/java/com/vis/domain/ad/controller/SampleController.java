@@ -9,7 +9,6 @@ public class SampleController {
     @RequestMapping("/")
     public String demo()
     {
-        System.out.println("test zz");
         return "/sample/index";
     }
 
